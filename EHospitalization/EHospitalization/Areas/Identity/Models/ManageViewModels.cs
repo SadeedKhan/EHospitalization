@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace EHospitalization.Models
+namespace EHospitalization.Areas.Identity.Models
 {
     public class IndexViewModel
     {

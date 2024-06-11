@@ -162,12 +162,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Identity\IdentityAreaRegistration.cs" />
     <Compile Include="Areas\User\Controllers\UserController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Areas\Identity\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Identity\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Identity\Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,9 +177,9 @@
       <DependentUpon>202405102326533_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Areas\Identity\Models\AccountViewModels.cs" />
+    <Compile Include="Areas\Identity\Models\IdentityModels.cs" />
+    <Compile Include="Areas\Identity\Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -245,6 +246,32 @@
     <Content Include="Assets\UserAssets\lib\tempusdominus\js\tempusdominus-bootstrap-4.js" />
     <Content Include="Assets\UserAssets\lib\tempusdominus\js\tempusdominus-bootstrap-4.min.js" />
     <Content Include="Assets\UserAssets\lib\waypoints\waypoints.min.js" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -363,6 +390,9 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <Content Include="Areas\User\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\User\Views\Shared\_UserLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -381,42 +411,57 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Shared\_UserLayout.cshtml" />
+    <Content Include="Areas\Identity\Views\Web.config" />
+    <Content Include="Areas\Identity\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Identity\Views\Home\About.cshtml" />
+    <Content Include="Areas\Identity\Views\Home\Contact.cshtml" />
+    <Content Include="Areas\Identity\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\Register.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ResetPassword.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\SendCode.cshtml" />
+    <Content Include="Areas\Identity\Views\Account\VerifyCode.cshtml" />
+    <Content Include="Areas\Identity\Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Areas\Identity\Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Areas\Identity\Views\Manage\Index.cshtml" />
+    <Content Include="Areas\Identity\Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Areas\Identity\Views\Manage\SetPassword.cshtml" />
+    <Content Include="Areas\Identity\Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\Lockout.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\Lockout.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Identity\Views\Shared\_UserLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Identity\Data\" />
     <Folder Include="Areas\User\Data\" />
-    <Folder Include="Areas\User\Views\Shared\" />
-    <Folder Include="Views\Default\" />
+    <Folder Include="bin\cs\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\fr\" />
+    <Folder Include="bin\it\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="bin\ko\" />
+    <Folder Include="bin\pl\" />
+    <Folder Include="bin\pt-BR\" />
+    <Folder Include="bin\roslyn\" />
+    <Folder Include="bin\ru\" />
+    <Folder Include="bin\tr\" />
+    <Folder Include="bin\zh-Hans\" />
+    <Folder Include="bin\zh-Hant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

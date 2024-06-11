@@ -1,18 +1,17 @@
-﻿@model EHospitalization.Models.ResetPasswordViewModel
+﻿@model EHospitalization.Areas.Identity.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Reset password";
+    ViewBag.Title = "Register";
 }
 
 <main aria-labelledby="title">
     <h2 id="title">@ViewBag.Title.</h2>
 
-    @using (Html.BeginForm("ResetPassword", "Account", FormMethod.Post, new { role = "form" }))
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
     {
         @Html.AntiForgeryToken()
-        <h4>Reset your password.</h4>
+        <h4>Create a new account.</h4>
         <hr />
         @Html.ValidationSummary("", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Code)
         <div class="row">
             @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-form-label" })
             <div class="col-md-10">
@@ -33,7 +32,7 @@
         </div>
         <div class="row">
             <div class="offset-md-2 col-md-10">
-                <input type="submit" class="btn btn-outline-dark" value="Reset" />
+                <input type="submit" value="Register" class="btn btn-outline-dark" />
             </div>
         </div>
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace EHospitalization.Models
+namespace EHospitalization.Areas.Identity.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
