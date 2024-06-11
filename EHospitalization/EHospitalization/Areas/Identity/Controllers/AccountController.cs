@@ -49,7 +49,6 @@ namespace EHospitalization.Areas.Identity.Controllers
             }
         }
 
-        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
