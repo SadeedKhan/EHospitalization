@@ -184,6 +184,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AdminAssets\css\index-68be077d5fd32ca1dda2995fcb764cc5dc30c8717e7ea92e7fc87fcd67f10caa.css" />
+    <Content Include="Assets\AdminAssets\css\index-c20c294967c4ed0be90d33e130e591a57859fccaebd0a19bf00bf499d001afc3.css" />
     <Content Include="Assets\AdminAssets\css\style.css" />
     <Content Include="Assets\AdminAssets\css\vendor\bootstrap.css" />
     <Content Include="Assets\AdminAssets\css\vendor\datepicker\datepicker.css" />
@@ -192,6 +194,8 @@
     <Content Include="Assets\AdminAssets\css\vendor\select2\select2.min.css" />
     <Content Include="Assets\AdminAssets\css\vendor\simplebar.css" />
     <Content Include="Assets\AdminAssets\css\vendor\themify-icons.css" />
+    <Content Include="Assets\AdminAssets\images\auth\1.png" />
+    <Content Include="Assets\AdminAssets\images\auth\2.png" />
     <Content Include="Assets\AdminAssets\images\avtar\2.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\3.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\4.jpg" />
@@ -206,7 +210,10 @@
     <Content Include="Assets\AdminAssets\js\custom-script.js" />
     <Content Include="Assets\AdminAssets\js\customizer.js" />
     <Content Include="Assets\AdminAssets\js\icons\feather.js" />
+    <Content Include="Assets\AdminAssets\js\index-cee01fcd9b628992337cf4b570cfd0246cd3e35d282592b0c4edb586f8ec7b63.js" />
     <Content Include="Assets\AdminAssets\js\jquery-3.7.0.min.js" />
+    <Content Include="Assets\AdminAssets\js\standard_measurements-3bc54d0cbac28acaf9e49915490168f52bb9b8bea5d35f6edabb67a686a83af4.js" />
+    <Content Include="Assets\AdminAssets\js\uc.js" />
     <Content Include="Assets\AdminAssets\js\vendors\datepicker\custom-datepicker.js" />
     <Content Include="Assets\AdminAssets\js\vendors\datepicker\datepicker.en.js" />
     <Content Include="Assets\AdminAssets\js\vendors\datepicker\datepicker.js" />
