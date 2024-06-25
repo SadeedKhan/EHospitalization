@@ -38,49 +38,51 @@
 <body>
     <!-- Login Start-->
     <div class="auth-main">
-        <div class="codex-authbox" style="min-width:630px;width:630px;margin:auto;background-color:#ffffff;padding:50px;border-radius:10px;border-bottom:10px solid #0c4079;box-shadow:0 0 20px 5px rgba(5,23,34,0.05);">
+           <div class="codex-authbox" style="min-width:630px;width:630px;margin:auto;background-color:#ffffff;padding:50px;border-radius:10px;border-bottom:10px solid #0c4079;box-shadow:0 0 20px 5px rgba(5,23,34,0.05);">
             <div class="auth-header">
                 <div class="codex-brand"><a href="index.html"><img class="img-fluid light-logo" src="~/Assets/AdminAssets/images/logo/logo.png" alt=""></a></div>
                 <h3>welcome to medixo</h3>
-                <h6>don't have an account?@Html.ActionLink("creat an account", "register", new {@class="text-primary"})</h6>
+                <h6>don't have an account?@Html.ActionLink("creat an account", "register", new { @class = "text-primary" })</h6>
             </div>
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
-            {<form action="#" style="display: block; margin-top: 0em; unicode-bidi: isolate">
-                    @Html.AntiForgeryToken()
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group" style="margin-bottom:20px;">
-                        @Html.LabelFor(m => m.Email, new { @class = "form-label" })
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="form-group" style="margin-bottom:20px;">
-                        @Html.LabelFor(m => m.Password, new { @class = "form-label" })
-                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="form-group mb-0" style="margin-bottom:20px;">
-                        <div class="auth-remember">
-                            <div class="form-check custom-chek">
-                                @Html.CheckBoxFor(m => m.RememberMe)
-                                @Html.LabelFor(m => m.RememberMe)
-                            </div>@Html.ActionLink("Forgot Your Passord", "ForgotPassword", null, new {@class= "text-primary f-pwd" })
-                       
-                        </div>
-                    </div>
-                    <div class="form-group" style="margin-bottom:20px;">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-sign-in"></i> Login</button>
-                    </div>
-                </form>}
-        <div class="auth-footer">
-            <h5 class="auth-with">Or login in with     </h5>
-            <ul class="login-list">
-                <li><a class="bg-fb" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/1.png" alt="facebook">facebook</a></li>
-                <li><a class="bg-google" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/2.png" alt="google">google</a></li>
-            </ul>
+            {  @Html.AntiForgeryToken()
+            <form action="#" style="display: block; margin-top: 0em; unicode-bidi: isolate">
 
-            
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group" style="margin-bottom:20px;">
+                    @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group" style="margin-bottom:20px;">
+                    @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group mb-0" style="margin-bottom:20px;">
+                    <div class="auth-remember">
+                        <div class="form-check custom-chek">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>@Html.ActionLink("Forgot Your Passord", "ForgotPassword", null, new { @class = "text-primary f-pwd" })
+
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom:20px;">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+                </div>
+            </form>}
+            <div class="auth-footer">
+                <h5 class="auth-with">Or login in with     </h5>
+                <ul class="login-list">
+                    <li><a class="bg-fb" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/1.png" alt="facebook">facebook</a></li>
+                    <li><a class="bg-google" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/2.png" alt="google">google</a></li>
+                </ul>
+
+
+            </div>
         </div>
-        </div>
+        
     </div>
     <!-- Login End-->
     <!-- main jquery-->

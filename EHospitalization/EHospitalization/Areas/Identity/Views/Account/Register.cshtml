@@ -34,52 +34,56 @@
 <body>
     <!-- authentication start-->
     <section class="py-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="codex-authbox">
-                        <div class="auth-header">
-                            <div class="codex-brand"><a href="index.html"><img class="img-fluid light-logo" src="~/Assets/AdminAssets/images/logo/logo.png" alt=""></a></div>
-                            <h3> @Html.ActionLink("Create your account","Register")</h3>
-                            <h6>Already have an account? <a class="text-primary" href="login.cshtml">login in here</a></h6>
-                        </div>
-                        <form action="#">
+        @using (Html.BeginForm("Register", "Account", new { area = "Identity" }, FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="codex-authbox">
+                            <div class="auth-header">
+                                <div class="codex-brand"><a href="index.html"><img class="img-fluid light-logo" src="~/Assets/AdminAssets/images/logo/logo.png" alt=""></a></div>
+                                <h3> @Html.ActionLink("Create your account", "Register")</h3>
+                                <h6>Already have an account? @Html.ActionLink("Already have an account?", "Login", new { @Class = "text-primary" })</h6>
+                            </div>
+                            <form action="#">
 
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Email, new { @class = "form-label" })
-                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                            </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                </div>
 
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.Password, new { @class = "form-label" })
-                                <div class="input-group group-input">
-                                    @Html.TextBoxFor(m => m.Password, new { @class = "form-control showhide-password", type = "password", PlaceHolder = "Please enter password" })
-                                    <span class="input-group-text toggle-show fa fa-eye"></span>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+                                    <div class="input-group group-input">
+                                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control showhide-password", type = "password", PlaceHolder = "Please enter password" })
+                                        <span class="input-group-text toggle-show fa fa-eye"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "form-label" })
-                                <div class="input-group group-input">
-                                    @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control showhide-password", type = "password", PlaceHolder = "Confirm Password" })
-                                    <span class="input-group-text toggle-show fa fa-eye"></span>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "form-label" })
+                                    <div class="input-group group-input">
+                                        @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control showhide-password", type = "password", PlaceHolder = "Confirm Password" })
+                                        <span class="input-group-text toggle-show fa fa-eye"></span>
+                                    </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit" value="Register"><i class="fa fa-paper-plane"></i> Register</button>
+                                </div>
+                            </form>
+                            <div class="auth-footer">
+                                <h5 class="auth-with">or register in with</h5>
+                                <ul class="login-list">
+                                    <li><a class="bg-fb" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/1.png" alt="facebook">facebook</a></li>
+                                    <li><a class="bg-google" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/2.png" alt="google">google</a></li>
+                                </ul>
                             </div>
-                            
-                            <div class="form-group">
-                                <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Register</button>
-                            </div>
-                        </form>
-                        <div class="auth-footer">
-                            <h5 class="auth-with">or register in with</h5>
-                            <ul class="login-list">
-                                <li><a class="bg-fb" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/1.png" alt="facebook">facebook</a></li>
-                                <li><a class="bg-google" href="javascript:void(0);"> <img class="img-fluid" src="~/Assets/AdminAssets/images/auth/2.png" alt="google">google</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </section>
     <!-- authentication end-->
     <!-- main jquery-->
