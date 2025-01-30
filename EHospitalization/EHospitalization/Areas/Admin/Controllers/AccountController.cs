@@ -1,11 +1,11 @@
-﻿using EHospitalization.Areas.Identity.Models;
-using Microsoft.AspNet.Identity.Owin;
+﻿using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web;
+using EHospitalization.Areas.Admin.Models;
 
 namespace EHospitalization.Areas.Admin.Controllers
 {

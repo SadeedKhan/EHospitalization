@@ -1,5 +1,5 @@
 ﻿using System;
-using EHospitalization.Areas.Identity.Models;
+using EHospitalization.Areas.Admin.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;

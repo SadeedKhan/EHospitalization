@@ -16,7 +16,7 @@ namespace EHospitalization
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { area="Admin",controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             
         }
