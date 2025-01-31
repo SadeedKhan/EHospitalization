@@ -1,10 +1,7 @@
 ﻿namespace EHospitalization.Migrations
 {
-    using EHospitalization.Areas.Identity.Models;
-    using System;
-    using System.Data.Entity;
+    using EHospitalization.Areas.Admin.Models;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {

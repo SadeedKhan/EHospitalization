@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using EHospitalization.Areas.Identity.Models;
+using EHospitalization.Areas.Admin.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;

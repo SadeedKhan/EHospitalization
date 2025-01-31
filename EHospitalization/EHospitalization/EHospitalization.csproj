@@ -166,14 +166,22 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
+    <Compile Include="Areas\Admin\Models\Ambulance.cs" />
+    <Compile Include="Areas\Admin\Models\Base\BaseModel.cs" />
+    <Compile Include="Areas\Admin\Models\Bills.cs" />
+    <Compile Include="Areas\Admin\Models\Department.cs" />
+    <Compile Include="Areas\Admin\Models\Emergency.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
     <Compile Include="Areas\Admin\Models\ManageViewModelscs.cs" />
-    <Compile Include="Areas\Identity\IdentityAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Models\OperationTheater.cs" />
+    <Compile Include="Areas\Admin\Models\Pharmacy.cs" />
+    <Compile Include="Areas\Admin\Models\PharmacyBills.cs" />
+    <Compile Include="Areas\Admin\Models\Reports.cs" />
+    <Compile Include="Areas\Admin\Models\Shifts.cs" />
+    <Compile Include="Areas\Admin\Models\TestList.cs" />
+    <Compile Include="Areas\Admin\Models\WardList.cs" />
     <Compile Include="Areas\User\Controllers\UserController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
-    <Compile Include="Areas\Identity\Controllers\AccountController.cs" />
-    <Compile Include="Areas\Identity\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Identity\Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,9 +190,6 @@
       <DependentUpon>202405102326533_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Areas\Identity\Models\AccountViewModels.cs" />
-    <Compile Include="Areas\Identity\Models\IdentityModels.cs" />
-    <Compile Include="Areas\Identity\Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -198,9 +203,12 @@
     <Content Include="Assets\AdminAssets\css\vendor\icoicon.css" />
     <Content Include="Assets\AdminAssets\css\vendor\select2\select2.min.css" />
     <Content Include="Assets\AdminAssets\css\vendor\simplebar.css" />
+    <Content Include="Assets\AdminAssets\css\vendor\slider\slick-slider\slick-theme.css" />
+    <Content Include="Assets\AdminAssets\css\vendor\slider\slick-slider\slick.css" />
     <Content Include="Assets\AdminAssets\css\vendor\themify-icons.css" />
     <Content Include="Assets\AdminAssets\images\auth\1.png" />
     <Content Include="Assets\AdminAssets\images\auth\2.png" />
+    <Content Include="Assets\AdminAssets\images\avtar\1.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\2.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\3.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\4.jpg" />
@@ -208,17 +216,20 @@
     <Content Include="Assets\AdminAssets\images\avtar\6.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\7.jpg" />
     <Content Include="Assets\AdminAssets\images\avtar\admin.jpg" />
+    <Content Include="Assets\AdminAssets\images\dashboard\hoswelcome-bg.jpg" />
     <Content Include="Assets\AdminAssets\images\logo\icon-logo.png" />
     <Content Include="Assets\AdminAssets\images\logo\logo.png" />
     <Content Include="Assets\AdminAssets\images\pro-sec.png" />
     <Content Include="Assets\AdminAssets\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\AdminAssets\js\custom-script.js" />
     <Content Include="Assets\AdminAssets\js\customizer.js" />
-    <Content Include="Assets\AdminAssets\js\icons\feather.js" />
+    <Content Include="Assets\AdminAssets\js\dashboard\hospital-dashboard.js" />
+    <Content Include="Assets\AdminAssets\js\icons\feather-icon\feather.js" />
     <Content Include="Assets\AdminAssets\js\index-cee01fcd9b628992337cf4b570cfd0246cd3e35d282592b0c4edb586f8ec7b63.js" />
     <Content Include="Assets\AdminAssets\js\jquery-3.7.0.min.js" />
     <Content Include="Assets\AdminAssets\js\standard_measurements-3bc54d0cbac28acaf9e49915490168f52bb9b8bea5d35f6edabb67a686a83af4.js" />
     <Content Include="Assets\AdminAssets\js\uc.js" />
+    <Content Include="Assets\AdminAssets\js\vendors\chart\apexcharts.js" />
     <Content Include="Assets\AdminAssets\js\vendors\datepicker\custom-datepicker.js" />
     <Content Include="Assets\AdminAssets\js\vendors\datepicker\datepicker.en.js" />
     <Content Include="Assets\AdminAssets\js\vendors\datepicker\datepicker.js" />
@@ -227,6 +238,7 @@
     <Content Include="Assets\AdminAssets\js\vendors\select2\custom-select2.js" />
     <Content Include="Assets\AdminAssets\js\vendors\select2\select2.min.js" />
     <Content Include="Assets\AdminAssets\js\vendors\simplebar.js" />
+    <Content Include="Assets\AdminAssets\js\vendors\slider\slick-slider\slick.min.js" />
     <Content Include="Assets\UserAssets\css\bootstrap.min.css" />
     <Content Include="Assets\UserAssets\css\style.css" />
     <Content Include="Assets\UserAssets\img\about.jpg" />
@@ -482,42 +494,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Areas\Identity\Views\Web.config" />
-    <Content Include="Areas\Identity\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Identity\Views\Home\About.cshtml" />
-    <Content Include="Areas\Identity\Views\Home\Contact.cshtml" />
-    <Content Include="Areas\Identity\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\Login.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\Register.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ResetPassword.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\SendCode.cshtml" />
-    <Content Include="Areas\Identity\Views\Account\VerifyCode.cshtml" />
-    <Content Include="Areas\Identity\Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Areas\Identity\Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Areas\Identity\Views\Manage\Index.cshtml" />
-    <Content Include="Areas\Identity\Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Areas\Identity\Views\Manage\SetPassword.cshtml" />
-    <Content Include="Areas\Identity\Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\Error.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\Lockout.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\Lockout.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Identity\Views\Shared\_UserLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Identity\Data\" />
     <Folder Include="Areas\User\Data\" />
     <Folder Include="bin\cs\" />
     <Folder Include="bin\de\" />
